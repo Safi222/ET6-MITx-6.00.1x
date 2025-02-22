@@ -1,0 +1,11 @@
+def towerOfHanoi(n, src, helper, dest):
+        if n == 0:
+            return
+        
+        towerOfHanoi(n-1, src, dest, helper)
+        print("Move disk", n, "from rod", src, "to rod", dest)
+        towerOfHanoi(n-1, helper, src, dest)
+  
+# test the function 
+n = 3
+towerOfHanoi(n, "A", "B" ,"C")
